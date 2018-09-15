@@ -3,8 +3,3 @@
 //
 
 
-class MathSoftware
-{
-public:
-    virtual  void mathSort();
-};

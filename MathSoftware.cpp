@@ -70,7 +70,7 @@ public:
     * param:arr - array to be sort
     * param:high - highest value of the subarray in the current step
     */
-   void mathSort(int size, int[] arr){
+   void mathSort(int size, int arr[]){
      if(size != 1){
        int low = 0;
        int mid = size/2;
@@ -95,7 +95,7 @@ class Mathematica: public MathSoftware
 {
 public:
     //Accepts an int representing the size of the array to be sorted, and the integer array to be sorted
-    void mathSort(int size, int[] arr)
+    void mathSort(int size, int arr[])
     {
       for(int i=0; i<size; i++){
         int j=i;
@@ -111,8 +111,22 @@ class MyMath: public  MyMath
 {
 public:
     //Accepts an int representing the size of the array to be sorted, and the integer array to be sorted
-    void mathSort(int size, int[] arr)
+    void mathSort(int size, int arr[])
     {
-
+        bool sorted = false;
+        while (!sorted) {
+            sorted = true;
+            for (int index = 0; index < size - 1; index++) {
+                if (arr[index + 1] > arr[index]) {
+                    sorted = false;
+                    temp1 = arr[index];
+                    temp2 = arr[index + 1];
+                    arr[index] = temp2;
+                    arr[index + 1] = temp1;
+                    delete temp1;
+                    delete temp2;
+                }
+            }
+        }
     }
 };

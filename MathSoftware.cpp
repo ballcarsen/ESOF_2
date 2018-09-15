@@ -110,7 +110,7 @@ public:
 };
 
 //Inherits from MathSoftware, mathSort will sort an array using bubble sort
-class MyMath: public  MyMath
+class MyMath: public  MathSoftware
 {
 public:
     //Accepts an int representing the size of the array to be sorted, and the integer array to be sorted

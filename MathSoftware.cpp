@@ -1,7 +1,3 @@
-//
-// Created by Carsen Ball on 9/15/18.
-//
-
 #include "MathSoftware.h"
 
 MTool::MTool(){}
@@ -102,17 +98,17 @@ MyMath::MyMath(){}
 
 void MyMath::mathSort(int size, int arr[])
 {
-    bool sorted = false;
-    while (!sorted) {
-        sorted = true;
-        for (int index = 0; index < size - 1; index++) {
-            if (arr[index + 1] < arr[index]) {
-                sorted = false;
-                int temp1 = arr[index];
-                int temp2 = arr[index + 1];
-                arr[index] = temp2;
-                arr[index + 1] = temp1;
-            }
-        }
+  bool sorted = false;
+  while (!sorted) {
+    sorted = true;
+    for (int index = 0; index < size - 1; index++) {
+      if (arr[index + 1] < arr[index]) {
+        sorted = false;
+        int temp1 = arr[index];
+        int temp2 = arr[index + 1];
+        arr[index] = temp2;
+        arr[index + 1] = temp1;
+      }
     }
+  }
 }

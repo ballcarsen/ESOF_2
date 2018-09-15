@@ -6,7 +6,7 @@
 class MathSoftware
 {
 public:
-    virtual void mathSort(int, int[]);
+    virtual void mathSort(int size, int[] arr);
 };
 
 //Inherits from MathSoftware, mathSort will sort an array using merge sort

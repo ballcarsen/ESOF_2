@@ -5,8 +5,6 @@
 #ifndef ESOF_2_MATHSOFTWARE_H
 #define ESOF_2_MATHSOFTWARE_H
 
-
-
 class MathSoftware
 {
 public:

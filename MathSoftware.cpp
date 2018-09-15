@@ -106,7 +106,7 @@ void MyMath::mathSort(int size, int arr[])
     while (!sorted) {
         sorted = true;
         for (int index = 0; index < size - 1; index++) {
-            if (arr[index + 1] > arr[index]) {
+            if (arr[index + 1] < arr[index]) {
                 sorted = false;
                 int temp1 = arr[index];
                 int temp2 = arr[index + 1];

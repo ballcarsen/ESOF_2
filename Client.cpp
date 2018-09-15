@@ -19,7 +19,7 @@ public:
 };
 
 int main(){
-  MathSoftware * ms = new MTool();
+  MathSoftware * ms = new MyMath();
   Client c;
   c.setSortStrategy(ms);
 

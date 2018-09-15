@@ -6,7 +6,7 @@
 class MathSoftware
 {
 public:
-    virtual void mathSort(int size, int[] arr);
+    virtual void mathSort(int size, int arr[]);
 };
 
 //Inherits from MathSoftware, mathSort will sort an array using merge sort
@@ -82,12 +82,13 @@ public:
        int * sub2 = new int[sub2_size];
        subarray(arr, sub1, mid, low);
        subarray(arr, sub2, high, mid);
-       mergesort(sub1, sub1_size);
-       mergesort(sub2, sub2_size);
+       mathSort(sub1_size, sub1);
+       mathSort(sub2_size, sub2);
        merge(sub1, sub1_size, sub2, sub2_size, arr );
        delete[] sub1;
        delete[] sub2;
      }
+   }
 };
 
 //Inherits from MathSoftware, mathSort will sort an array using insertion sort
@@ -122,12 +123,10 @@ public:
             for (int index = 0; index < size - 1; index++) {
                 if (arr[index + 1] > arr[index]) {
                     sorted = false;
-                    temp1 = arr[index];
-                    temp2 = arr[index + 1];
+                    int temp1 = arr[index];
+                    int temp2 = arr[index + 1];
                     arr[index] = temp2;
                     arr[index + 1] = temp1;
-                    delete temp1;
-                    delete temp2;
                 }
             }
         }

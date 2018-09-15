@@ -2,6 +2,7 @@
 // Created by Carsen Ball on 9/15/18.
 //
 #include "MathSoftware.h"
+#include "iostream"
 
 class Client{
 private:
@@ -27,6 +28,7 @@ int main(){
   for(int i=0; i<5; i++){
     std::cout<<arr[i]<<std::endl;
   }
+  std::cout<<std::endl;
   c.mathSort(size, arr);
   for(int i=0; i<5; i++){
     std::cout<<arr[i]<<std::endl;

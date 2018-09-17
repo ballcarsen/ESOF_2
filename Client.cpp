@@ -23,23 +23,28 @@ public:
 
 void print_arr(int len, int arr[]){
   for(int i=0; i<len; i++){
-    std::cout<<arr[i]<<std::endl;
+    std::cout<<arr[i]<<" ";
   }
-  std::cout<<""<<std::endl;
+  std::cout<<"\n"<<std::endl;
 }
 
 int main(){
 
 
-  int input;
+  int input = -1;
 
   //Prompts user for the first strategy to use
-  std::cout << "Choose a default sort strategy" << std::endl;
-  std::cout << "0 for Mathematica" << std::endl;
-  std::cout << "1 for MTool" << std::endl;
-  std::cout << "2 for MyMath\n" << std::endl;
-  std::cin >> input;
-  std::cout <<""<<std::endl;
+  while(input < 0 || input > 2){
+    std::cout << "Choose a default sort strategy" << std::endl;
+    std::cout << "0 for Mathematica" << std::endl;
+    std::cout << "1 for MTool" << std::endl;
+    std::cout << "2 for MyMath\n" << std::endl;
+    std::cin >> input;
+    std::cout <<""<<std::endl;
+    if(input < 0 || input > 2){
+      std::cout<<"Selection must be 0, 1, or 2. Please Try Again.\n"<<std::endl;
+    }
+  }
   Client c;
 /*
   MathSoftware * ms1 = new Mathematica();
@@ -62,16 +67,22 @@ int main(){
       {
       MathSoftware *ms1 = new Mathematica();
       MathSoftware *ms2 = new MTool();
+      std::cout<<"Mathematica Selected."<<std::endl;
       c.setSortStrategy(ms1);
 
+      std::cout<<"Unsorted Array:"<<std::endl;
       print_arr(size, to_sort);
       c.mathSort(size, to_sort);
+      std::cout<<"Sorted Array:"<<std::endl;
       print_arr(size, to_sort);
 
+      std::cout<<"Switching to MTool..."<<std::endl;
       c.setSortStrategy(ms2);
 
+      std::cout<<"Unsorted Array:"<<std::endl;
       print_arr(size, to_sort_1);
       c.mathSort(size, to_sort_1);
+      std::cout<<"Sorted Array:"<<std::endl;
       print_arr(size, to_sort_1);
       break;
     }
@@ -79,16 +90,22 @@ int main(){
       {
       MathSoftware *ms2 = new MTool();
       MathSoftware *ms3 = new MyMath();
+      std::cout<<"MTool Selected."<<std::endl;
       c.setSortStrategy(ms2);
 
+      std::cout<<"Unsorted Array:"<<std::endl;
       print_arr(size, to_sort);
       c.mathSort(size, to_sort);
+      std::cout<<"Sorted Array:"<<std::endl;
       print_arr(size, to_sort);
 
+      std::cout<<"Switching to MyMath..."<<std::endl;
       c.setSortStrategy(ms3);
 
+      std::cout<<"Unsorted Array:"<<std::endl;
       print_arr(size, to_sort_1);
       c.mathSort(size, to_sort_1);
+      std::cout<<"Sorted Array:"<<std::endl;
       print_arr(size, to_sort_1);
       break;
     }
@@ -96,16 +113,22 @@ int main(){
       {
       MathSoftware *ms3 = new MyMath();
       MathSoftware *ms1 = new Mathematica();
+      std::cout<<"MyMath Selected."<<std::endl;
       c.setSortStrategy(ms3);
 
+      std::cout<<"Unsorted Array:"<<std::endl;
       print_arr(size, to_sort);
       c.mathSort(size, to_sort);
+      std::cout<<"Sorted Array:"<<std::endl;
       print_arr(size, to_sort);
 
+      std::cout<<"Switching to Mathematica..."<<std::endl;
       c.setSortStrategy(ms1);
 
+      std::cout<<"Unsorted Array:"<<std::endl;
       print_arr(size, to_sort_1);
       c.mathSort(size, to_sort_1);
+      std::cout<<"Sorted Array:"<<std::endl;
       print_arr(size, to_sort_1);
       break;
     }

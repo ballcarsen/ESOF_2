@@ -40,7 +40,6 @@ int main(){
   std::cout << "2 for MyMath\n" << std::endl;
   std::cin >> input;
   std::cout <<""<<std::endl;
-
   Client c;
 /*
   MathSoftware * ms1 = new Mathematica();

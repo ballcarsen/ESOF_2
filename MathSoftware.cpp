@@ -80,7 +80,12 @@ void MTool::mathSort(int size, int arr[]){
 
 Mathematica::Mathematica(){}
 
-//Accepts an int representing the size of the array to be sorted, and the integer array to be sorted
+/*Accepts an int representing the size of the array to be sorted, and the integer array to be sorted
+ * param:arr - array to be sorted
+ * param:size - size of array to be sorted
+ * Uses insertion sort to sort array
+ */
+
 void Mathematica::mathSort(int size, int arr[])
 {
   for(int i=0; i<size; i++){
@@ -95,6 +100,11 @@ void Mathematica::mathSort(int size, int arr[])
 }
 
 MyMath::MyMath(){}
+/*Accepts an int representing the size of the array to be sorted, and the integer array to be sorted
+ * param:arr - array to be sorted
+ * param:size - size of array to be sorted
+ * Uses bubble sort to sort array
+ */
 
 void MyMath::mathSort(int size, int arr[])
 {
